@@ -1,23 +1,42 @@
-body,
+/* body,
 html {
-  /*font-family: 'Courier New', sans-serif;*/
+  font-family: 'TH SarabunPSK', sans-serif;
   font-family: 'KanitFont';
   src: local('KanitFont'), url(../src/assets/fonts/Kanit-Thin.ttf) format('truetype');
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  */
 
   /* 👇️ or use Operating system default fonts 👇️ */
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
+    sans-serif; 
+}*/
+
+body, html {
+  /* font-family: 'CordiaUPC', sans-serif; */
+  /* font-family: 'KanitFont'; */
+  /* font-family: 'GoogleNotoSans', sans-serif; */
+  font-family: 'Noto Sans Thai', sans-serif;
+  font-size: 10pt;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-}
-/* @font-face {
+@font-face {
     font-family: 'KanitFont';
-    src: local('KanitFont'), url(../assets/fonts/Kanit-Light.ttf) format('opentype');}
+    src: local('KanitFont'), url(../src/assets/fonts/Kanit-Regular.ttf) format('OTF');
+  }
+
+@font-face {
+  font-family: 'NotoSansFont';
+  src: local('NotoSansFont'), url(../src/assets/fonts/NotoSansThai-Regular.ttf) format('OTF');
+}
+
+@font-face {
+  font-family: 'GoogleNotoSans';
+  src: url(https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100&display=swap);
+}
     /* other formats include: 'woff2', 'truetype, 'opentype',
                               'embedded-opentype', and 'svg' */
+.App-Section{
+  font-family: 'KanitFont';
+}

@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import { Layout } from './components/Layout';
 import './custom.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import InputForm from './components/InputForm';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -17,6 +19,7 @@ export default class App extends Component {
           })}
         </Routes>
       </Layout>
+      
     );
   }
 }
