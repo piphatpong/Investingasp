@@ -8,7 +8,7 @@ import React from "react";
 //   setIsOpen((isOpen) => !isOpen);
 // }
 
-function RecBuyEquity() {
+function RecBuyEquity2() {
 
   // const [isOpen, setIsOpen] = useState(true);
 
@@ -19,7 +19,7 @@ function RecBuyEquity() {
   const TodayDate = nowDate+"/"+nowMonth+"/"+nowYear;
 
   return (
-    <div className="container m-10 mx-auto p-3" style={{ background: '#cee' }}>
+    <div className="container m-10 mx-auto p-3" style={{ background: '#cce' }}>
 
       <form>
         <table class="table table-striped m-10">
@@ -92,4 +92,4 @@ function RecBuyEquity() {
   )
 }
 
-export default RecBuyEquity;
+export default RecBuyEquity2;
