@@ -2,11 +2,9 @@
 // import Table from 'react-bootstrap/Table';
 // import React, { useState } from "react";
 import React from "react";
+import CreditRating from "./CraditRating";
 
-
-// function switchToggle() {
-//   setIsOpen((isOpen) => !isOpen);
-// }
+// ซื้อหุ้นทุน
 
 function RecBuyEquity() {
 
@@ -16,7 +14,7 @@ function RecBuyEquity() {
   const nowDate = currentDate.getDate();
   const nowMonth = currentDate.getMonth() + 1; // Note: Jan = 0, Feb = 1
   const nowYear = currentDate.getFullYear();
-  const TodayDate = nowDate+"/"+nowMonth+"/"+nowYear;
+  const TodayDate = nowDate + "/" + nowMonth + "/" + nowYear;
 
   return (
     <div className="container m-10 mx-auto p-3" style={{ background: '#cee' }}>
@@ -26,7 +24,7 @@ function RecBuyEquity() {
           <tr>
             <td>
               <label class="form-label">วันที่
-                <input type="text" class="form-control form-control-sm" id="TodayDate" value={TodayDate}/>
+                <input type="text" class="form-control form-control-sm" id="TodayDate" value={TodayDate} />
               </label>
             </td>
           </tr>
@@ -44,9 +42,7 @@ function RecBuyEquity() {
                   </label>
                 </div>
                 <div class="p-2 bd-highlight">
-                  <label class="form-label">Cradit Rating
-                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
-                  </label>
+                  <div><CreditRating /></div>
                 </div>
                 <div class="p-2 bd-highlight">
                   <label class="form-label">จำนวนเงิน/บาท
@@ -64,7 +60,7 @@ function RecBuyEquity() {
                   </label>
                 </div>
                 <div class="p-2 bd-highlight">
-                  <label class="form-label">วันที่เริ่ม
+                  <label class="form-label">วันเริ่มต้น
                     <input type="date" class="form-control" name="startdate" required pattern="\d{1,2}/\d{1,2}/\d{4}" />
                     {/* <span class="validity"></span> */}
                   </label>

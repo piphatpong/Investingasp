@@ -12,7 +12,7 @@ export class RecordBuy extends Component {
     return (
       <div>
         <div>
-          <h3>Record Buy</h3>
+          <h3>บันทึกการซื้อ</h3>
         </div>
           <div><TabComponent /></div>
       </div>

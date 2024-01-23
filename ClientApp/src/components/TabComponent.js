@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Tabs.css';
 import RecBuyEquity from './RecBuyEquity';
-import RecBuyEquity2 from './RecBuyEquity2';
+import RecBuyBond from './RecBuyBond';
 
 
 const TabComponent = () => {
@@ -23,7 +23,7 @@ const TabComponent = () => {
         </ul>
 
         <div className="tab_content">
-            { activeTab === 1 && <div className="tab_panel">ซื้อตราสารหนี้<div><RecBuyEquity2 /></div></div> }
+            { activeTab === 1 && <div className="tab_panel">ซื้อตราสารหนี้<div><RecBuyBond /></div></div> }
             { activeTab === 2 && <div className="tab_panel">ซื้อหุ้นทุน<div><RecBuyEquity /></div></div> }
             { activeTab === 3 && <div className="tab_panel">ซื้อหน่วยลงทุน</div> }
             { activeTab === 4 && <div className="tab_panel">ซื้อตราสารอนุพันธ์</div> }

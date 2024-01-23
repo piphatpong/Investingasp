@@ -7,13 +7,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
   */
 
-  /* 👇️ or use Operating system default fonts 👇️ */
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+/* 👇️ or use Operating system default fonts 👇️ */
+/* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; 
 }*/
 
-body, html {
+body,
+html {
   /* font-family: 'CordiaUPC', sans-serif; */
   /* font-family: 'KanitFont'; */
   /* font-family: 'GoogleNotoSans', sans-serif; */
@@ -22,9 +23,9 @@ body, html {
 }
 
 @font-face {
-    font-family: 'KanitFont';
-    src: local('KanitFont'), url(../src/assets/fonts/Kanit-Regular.ttf) format('OTF');
-  }
+  font-family: 'KanitFont';
+  src: local('KanitFont'), url(../src/assets/fonts/Kanit-Regular.ttf) format('OTF');
+}
 
 @font-face {
   font-family: 'NotoSansFont';
@@ -35,8 +36,4 @@ body, html {
   font-family: 'GoogleNotoSans';
   src: url(https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100&display=swap);
 }
-    /* other formats include: 'woff2', 'truetype, 'opentype',
-                              'embedded-opentype', and 'svg' */
-.App-Section{
-  font-family: 'KanitFont';
-}
+
