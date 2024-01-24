@@ -9,7 +9,7 @@ const TabComponent = () => {
 
   const handleTabClick = (id) => {
     setActiveTab(id);
-  };
+  }; //
 
   return (
     <div>
@@ -23,11 +23,11 @@ const TabComponent = () => {
         </ul>
 
         <div className="tab_content">
-            { activeTab === 1 && <div className="tab_panel">ซื้อตราสารหนี้<div><RecBuyBond /></div></div> }
-            { activeTab === 2 && <div className="tab_panel">ซื้อหุ้นทุน<div><RecBuyEquity /></div></div> }
-            { activeTab === 3 && <div className="tab_panel">ซื้อหน่วยลงทุน</div> }
-            { activeTab === 4 && <div className="tab_panel">ซื้อตราสารอนุพันธ์</div> }
-            { activeTab === 5 && <div className="tab_panel">เงินฝากสถาบันการเงิน</div> }
+            { activeTab === 1 && <div className="tab_panel"><div><RecBuyBond /></div></div> /* ซื้อตราสารหนี้ */  }  
+            { activeTab === 2 && <div className="tab_panel"><div><RecBuyEquity /></div></div> /* ซื้อหุ้นทุน */  } 
+            { activeTab === 3 && <div className="tab_panel"></div> /* ซื้อหน่วยลงทุน */  } 
+            { activeTab === 4 && <div className="tab_panel"></div> /* ซื้อตราสารอนุพันธ์ */  } 
+            { activeTab === 5 && <div className="tab_panel"></div> /* เงินฝากสถาบันการเงิน */  } 
         </div>
     </div>
   );

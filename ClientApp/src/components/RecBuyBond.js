@@ -24,6 +24,11 @@ function RecBuyBond() {
         <table class="table table-striped m-10">
           <tr>
             <td>
+              <h3>ซื้อตราสารหนี้</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <label class="form-label">วันที่บันทึก
                 <input type="text" class="form-control form-control-sm" id="TodayDate" value={TodayDate} />
               </label>
@@ -32,7 +37,7 @@ function RecBuyBond() {
           </tr>
           <tr>
             <td>
-              <div class="d-flex justify-content-between flex-wrap mb-3">
+              <div class="d-flex align-content-around flex-wrap align-content-around mb-3">
                 <div class="p-2 bd-highlight">
                   <label class="form-label">ชื่อหลักทรัพย์
                     <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
@@ -106,12 +111,25 @@ function RecBuyBond() {
                 </div>
 
                 <div class="p-2 bd-highlight">
-                  <label class="form-label">จำนวนเงินราคาตรา (มูลค่าตราสาร)
+                  <label class="form-label">สถานะการวางไว้กับนายทะเบียน
                     <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
                   </label>
                 </div>
-
-
+                <div class="p-2 bd-highlight">
+                  <label class="form-label">วันที่จ่ายดอกเบี้ย
+                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
+                  </label>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <label class="form-label">วิธีการรับเงิน (Book ธ./เช็ค)
+                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
+                  </label>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <label class="form-label">รูปแบบการถือครอง
+                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
+                  </label>
+                </div>
               </div>
             </td>
           </tr>

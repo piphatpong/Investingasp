@@ -17,10 +17,14 @@ function RecBuyEquity() {
   const TodayDate = nowDate + "/" + nowMonth + "/" + nowYear;
 
   return (
-    <div className="container m-10 mx-auto p-3" style={{ background: '#cee' }}>
+    <div className="container m-10 mx-auto p-3">
 
       <form>
         <table class="table table-striped m-10">
+          <tr><td>
+            <h2>ซื้อหุ้นทุน</h2>
+          </td>
+          </tr>
           <tr>
             <td>
               <label class="form-label">วันที่
@@ -30,45 +34,65 @@ function RecBuyEquity() {
           </tr>
           <tr>
             <td>
-              <div class="d-flex flex-wrap align-content-start mb-3">
+              <div class="d-flex flex-wrap  align-content-around mb-3">
+                <div class="p-2 bd-highlight">
+                  <label class="form-label">Port
+                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
+                  </label>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <label class="form-label">ชื่อหุ้นทุน
+                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
+                  </label>
+                </div>
                 <div class="p-2 bd-highlight">
                   <label class="form-label">ชื่อย่อ
                     <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
                   </label>
                 </div>
                 <div class="p-2 bd-highlight">
-                  <label class="form-label">ชื่อหลักทรัพย์
+                  <label class="form-label">ผู้ออกหลักทรัพย์
                     <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
                   </label>
                 </div>
                 <div class="p-2 bd-highlight">
-                  <div><CreditRating /></div>
-                </div>
-                <div class="p-2 bd-highlight">
-                  <label class="form-label">จำนวนเงิน/บาท
+                  <label class="form-label">เลขที่หลักทรัพย์
                     <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
                   </label>
                 </div>
                 <div class="p-2 bd-highlight">
-                  <label class="form-label">อัตราดอกเบี้ย
+                  <label class="form-label">ประเภทหุ้นทุน
                     <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
                   </label>
                 </div>
                 <div class="p-2 bd-highlight">
-                  <label class="form-label">ระยะเวลา
+                  <label class="form-label">จำนวนหุ้น
                     <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
                   </label>
                 </div>
                 <div class="p-2 bd-highlight">
-                  <label class="form-label">วันเริ่มต้น
-                    <input type="date" class="form-control" name="startdate" required pattern="\d{1,2}/\d{1,2}/\d{4}" />
-                    {/* <span class="validity"></span> */}
+                  <label class="form-label">ราคา/หน่วย
+                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
                   </label>
                 </div>
                 <div class="p-2 bd-highlight">
-                  <label class="form-label">วันที่สิ้นสุด
-                    <input type="date" class="form-control" name="enddate" required pattern="\d{1,2}/\d{1,2}/\d{4}" />
-                    {/* <span class="validity"></span> */}
+                  <label class="form-label">มูลค่าซื้อรวม
+                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
+                  </label>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <label class="form-label">COM+VAT
+                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
+                  </label>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <label class="form-label">สถานะการวางไว้กับนายทะเบียน
+                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
+                  </label>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <label class="form-label">วิธีการรับเงิน (Book ธ./เช็ค)
+                    <input type="text" class="form-control form-control-sm mt-0" placeholder="" />
                   </label>
                 </div>
                 <div class="p-2 bd-highlight">
@@ -79,7 +103,15 @@ function RecBuyEquity() {
               </div>
             </td>
           </tr>
-
+          <tr align="center">
+            <td>
+              <div align="center">
+                <button className="btn btn-primary" onclick="">บันทึก</button>
+                &nbsp; &nbsp;
+                <button className="btn btn-primary" onclick="">ยกเลิก</button>
+              </div>
+            </td>
+          </tr>
         </table>
       </form>
 
