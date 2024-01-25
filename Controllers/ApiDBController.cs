@@ -3,7 +3,7 @@
 namespace recExtPolAge.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("[controller]")]
 public class ApiDBController : ControllerBase{
     private static readonly string[] Summaries = new[]
     {
