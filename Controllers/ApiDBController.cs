@@ -3,8 +3,8 @@
 namespace recExtPolAge.Controllers;
 
 [ApiController]
-[Route("[controller]")]
-public class ApiDBController : Controller{
+[Route("api/[controller]")]
+public class ApiDBController : ControllerBase{
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"

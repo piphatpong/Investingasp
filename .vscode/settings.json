@@ -1,3 +1,17 @@
 {
-    "dotnet.defaultSolution": "recExtPolAge.sln"
-}
+    "dotnet.defaultSolution": "recExtPolAge.sln",
+    
+    // "liveServer.settings.port": 5501,
+    // "liveServer.settings.root": "/",
+    // "liveServer.settings.CustomBrowser": "chrome",
+    // "liveServer.settings.https": 
+    // {
+    //   "enable": true,     
+    //   "cert": "D:\\fth\\welcome\\mycert\\mycert.crt",
+    //   "key": "D:\\fth\\welcome\\mycert\\mycert.key",
+    //   "passphrase": "P@ssword1234"
+    // }
+ }
+
+    
+    
