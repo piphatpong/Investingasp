@@ -2,5 +2,5 @@ namespace recExtPolAge;
 
 public class User
 {
-    public int NameUser { get; set; }
+    public string NameUser { get; set; }
 }

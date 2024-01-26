@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch chrome my cool app against localhost",
             "url": "https://localhost:44424",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}",
         }
     ]
 }

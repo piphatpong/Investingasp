@@ -3,7 +3,8 @@ import './Tabs.css';
 import RecBuyEquity from './RecBuyEquity';
 import RecBuyBond from './RecBuyBond';
 import FetchData from './FetchData';
-import FetchTest from './FetchTest';
+// import FetchTest from './FetchTest';
+import FetchUser from './FetchUser';
 
 
 const TabComponent = () => {
@@ -33,7 +34,7 @@ const TabComponent = () => {
             { activeTab === 4 && <div className="tab_panel"></div> /* ซื้อตราสารอนุพันธ์ */  } 
             { activeTab === 5 && <div className="tab_panel"></div> /* เงินฝากสถาบันการเงิน */  } 
             { activeTab === 6 && <div className="tab_panel"><div><FetchData /></div></div> /* ดึงข้อมูล */  } 
-            { activeTab === 7 && <div className="tab_panel"><div><FetchTest /></div></div> /* ดึงข้อมูล */  } 
+            { activeTab === 7 && <div className="tab_panel"><div><FetchUser /></div></div> /* ดึงข้อมูล */  } 
 
         </div>
     </div>
