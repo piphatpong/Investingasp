@@ -5,6 +5,7 @@ import RecBuyBond from './RecBuyBond';
 import FetchData from './FetchData';
 // import FetchTest from './FetchTest';
 import FetchUser from './FetchUser';
+import InputFormStock from './InputFormStock';
 
 
 const TabComponent = () => {
@@ -24,6 +25,7 @@ const TabComponent = () => {
             <li className={activeTab === 5 ? 'active' : ''} onClick={() => handleTabClick(5) }>เงินฝากสถาบันการเงิน</li>
             <li className={activeTab === 6 ? 'active' : ''} onClick={() => handleTabClick(6) }>ดึง Weather</li>
             <li className={activeTab === 7 ? 'active' : ''} onClick={() => handleTabClick(7) }>ดึง User</li>
+            <li className={activeTab === 8 ? 'active' : ''} onClick={() => handleTabClick(8) }>กรอกข้อมูล stock</li>
 
         </ul>
 
@@ -35,6 +37,7 @@ const TabComponent = () => {
             { activeTab === 5 && <div className="tab_panel"></div> /* เงินฝากสถาบันการเงิน */  } 
             { activeTab === 6 && <div className="tab_panel"><div><FetchData /></div></div> /* ดึงข้อมูล */  } 
             { activeTab === 7 && <div className="tab_panel"><div><FetchUser /></div></div> /* ดึงข้อมูล */  } 
+            { activeTab === 8 && <div className="tab_panel"><div><InputFormStock /></div></div> /* ดึงข้อมูล */  } 
 
         </div>
     </div>
