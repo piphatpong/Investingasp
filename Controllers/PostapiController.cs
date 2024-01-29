@@ -7,9 +7,8 @@ namespace recExtPolAge.Controllers;
 [Route("[controller]")]
 public class PostapiController : ControllerBase
 { 
-    public bool Post(Array postdata){
-        const string connectionString =
-            @"server=VELA\SQLEXPRESS;database=Investing;integrated security=true";
+    public bool Post(PostApi postapidata){
+        const string connectionString = @"server=VELA\SQLEXPRESS;database=Investing; UserId=Invest; Password=1234;";
 
         string query = "insert into StockInfo values(@Id,@Name,@Loc,@Sal)";
         // Provide the query string with a parameter placeholder.
@@ -20,10 +19,10 @@ public class PostapiController : ControllerBase
         using (SqlConnection connect = new(connectionString))
         { 
             SqlCommand cmd = new SqlCommand(query, connect);
-            // cmd.Parameters.Add(new SqlParameter("@Id", postapi.Id));
-            // cmd.Parameters.Add(new SqlParameter("@Name", postapi.Name));
-            // cmd.Parameters.Add(new SqlParameter("@Loc", postapi.Location));
-            // cmd.Parameters.Add(new SqlParameter("@Sal", postapi.Salary));
+             cmd.Parameters.Add(new SqlParameter("@Id", postapidata.Id));
+             cmd.Parameters.Add(new SqlParameter("@Name", postapidata.Name));
+             cmd.Parameters.Add(new SqlParameter("@Loc", postapidata.Location));
+             cmd.Parameters.Add(new SqlParameter("@Sal", postapidata.Salary));
             connect.Open();
             int noOfRowsAffected = cmd.ExecuteNonQuery();
             connect.Close();

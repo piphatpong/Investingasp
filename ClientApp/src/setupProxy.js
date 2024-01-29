@@ -9,6 +9,7 @@ const context = [
   "/weatherforecast",
   "/user",
   "/apidb",
+  "/postapi"
 ];
 
 const onError = (err, req, resp, target) => {
