@@ -6,8 +6,12 @@ class InputFormStock extends React.Component {
     constructor(props) {
         super(props);
         this.refs = React.createRef();
-        this.state = {message:''};
+        this.state = {message:'', getData: '', loading: true };
     }
+
+    // componentDidMount() {
+    //     this.getTestData();
+    //   }
 
     onCreateEmployee = () => {
         let PostApiData = {
@@ -24,10 +28,18 @@ class InputFormStock extends React.Component {
             body: PostApiData
         }).then(r => r.json()).then(res => {
             if (res) {
-                this.setState({ message: 'New Employee is Created Successfully' });
+                this.setState({ message: 'Success ////'+res.toString()});
+            }else{
+                this.setState({message:'Fail ////'});
             }
         });
     }
+
+    async getTestData() {
+        const response = await fetch('postapi');
+        console.log("response: " + response);
+        this.setState({ getData: 'Test getdata result: '+ response.message });
+      }
 
     render() {
         return (
@@ -54,16 +66,20 @@ class InputFormStock extends React.Component {
                         </tr>
                         <tr>
                             <td>
-                                <button onClick={this.onCreateEmployee}>Create</button>
+                                {/* <button onClick={this.onCreateEmployee}>Create</button> */}
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <p>{this.state.message}</p>
+                                <p>message: {this.state.message}</p>
+                                <p>getData: {this.state.getData}</p>
                             </td>
                         </tr>
                     </table>
                 </form>
+                <button onClick={this.onCreateEmployee}>Create</button>
+
+                {/* <button onClick={this.getTestData()}>Test Postapi</button> */}
 
             </div>
         );

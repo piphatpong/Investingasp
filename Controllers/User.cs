@@ -1,3 +1,4 @@
+using System.Text.Json.Nodes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace recExtPolAge.Controllers;
@@ -7,9 +8,9 @@ namespace recExtPolAge.Controllers;
 public class UserController : ControllerBase
 {
     [HttpGet]
-    public String Get()
+    public string Get()
     {
-        return ("hello");
+        return("jsonstr");
     }
     [HttpGet("{id}")]
     public String Get(int id)

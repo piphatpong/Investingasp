@@ -7,9 +7,16 @@ namespace recExtPolAge.Controllers;
 [Route("[controller]")]
 public class PostapiController : ControllerBase
 { 
-    public bool Post(PostApi postapidata){
-        const string connectionString = @"server=VELA\SQLEXPRESS;database=Investing; UserId=Invest; Password=1234;";
+    [HttpGet]
+    public string Get(){
+        return("Post API Test : Success !!!");
+    }
 
+    [HttpPost]
+    public string Post(PostApi postapidata){
+        //const string connectionString = @"server=BL-IT-01\SQLEXPRESS;database=Investing; UserId=Invest; Password=1234;";
+        const string connectionString = "Data Source=BL-IT-01\\SQLEXPRESS;Initial Catalog=Investing;User ID=Invest;Password=1234; Encrypt=True;";
+        
         string query = "insert into StockInfo values(@Id,@Name,@Loc,@Sal)";
         // Provide the query string with a parameter placeholder.
        
@@ -26,7 +33,8 @@ public class PostapiController : ControllerBase
             connect.Open();
             int noOfRowsAffected = cmd.ExecuteNonQuery();
             connect.Close();
-            return noOfRowsAffected > 0 ? true : false;
+            // return noOfRowsAffected > 0 ? true : false;
+            return postapidata.Id;
         }        
     }
 }

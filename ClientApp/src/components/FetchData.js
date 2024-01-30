@@ -52,7 +52,7 @@ export class FetchData extends Component {
   }
 
   async populateWeatherData() {
-    const response = await fetch('aipdb');
+    const response = await fetch('weatherforecast');
     console.log("response: " + response);
     const data = await response.json();
     console.log("data: " + data);
