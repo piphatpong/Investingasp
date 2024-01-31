@@ -8,7 +8,7 @@ const context = [
   "/swagger",
   "/weatherforecast",
   "/user",
-  "/apidb",
+  "/buyrecstock",
   "/postapi"
 ];
 

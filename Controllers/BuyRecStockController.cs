@@ -5,28 +5,39 @@ namespace recExtPolAge.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class PostapiController : ControllerBase
+public class BuyRecStockController : ControllerBase
 {
     const string connectionString = "Data Source=BL-IT-01\\SQLEXPRESS;Initial Catalog=Investing;User ID=Invest;Password=1234; Encrypt=True;TrustServerCertificate=True";
 
     [HttpGet]
     public string Get()
     {
-        return ("Post API Test : Success !!!");
+        return ("Get API Test : Success !!!");
     }
 
     [HttpPost]
-    public bool Post(PostApi postapidata)
+    public bool Post(BuyRecStockModel postapidata)
     {
-        string query = "insert into StockInfo values(@Id,@Name,@Loc,@Sal)";
+        string query = @"insert into StockInfo values(@ord_no,@port,@stockname,@shortstockname,@issuername,@stockaccount
+        ,@stocktype,@stockvolume,@unitprice,@total,@commvat,@regdepositstatus,@receivemethod,@holdtype)";
 
         using (SqlConnection connect = new(connectionString))
         {
             SqlCommand cmd = new SqlCommand(query, connect);
-            cmd.Parameters.Add(new SqlParameter("@Id", postapidata.Id));
-            cmd.Parameters.Add(new SqlParameter("@Name", postapidata.Name));
-            cmd.Parameters.Add(new SqlParameter("@Loc", postapidata.Location));
-            cmd.Parameters.Add(new SqlParameter("@Sal", postapidata.Salary));
+            cmd.Parameters.Add(new SqlParameter("@ord_no", postapidata.ord_no));
+            cmd.Parameters.Add(new SqlParameter("@port", postapidata.port));
+            cmd.Parameters.Add(new SqlParameter("@stockname", postapidata.stockname));
+            cmd.Parameters.Add(new SqlParameter("@issuername", postapidata.issuername));
+            cmd.Parameters.Add(new SqlParameter("@stockaccount", postapidata.stockaccount));
+            cmd.Parameters.Add(new SqlParameter("@stocktype", postapidata.stocktype));
+            cmd.Parameters.Add(new SqlParameter("@stockvolume", postapidata.stockvolume));
+            cmd.Parameters.Add(new SqlParameter("@unitprice", postapidata.unitprice));
+            cmd.Parameters.Add(new SqlParameter("@total", postapidata.total));
+            cmd.Parameters.Add(new SqlParameter("@commvat", postapidata.commvat));
+            cmd.Parameters.Add(new SqlParameter("@regdepositstatus", postapidata.regdepositstatus));
+            cmd.Parameters.Add(new SqlParameter("@receivemethod", postapidata.receivemethod));
+            cmd.Parameters.Add(new SqlParameter("@holdtype", postapidata.holdtype));
+
             connect.Open();
             int noOfRowsAffected = cmd.ExecuteNonQuery();
             connect.Close();

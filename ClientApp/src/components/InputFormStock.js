@@ -1,17 +1,11 @@
 import React from "react";
-// import { useState } from "react";
-
 
 class InputFormStock extends React.Component {
     constructor(props) {
         super(props);
         this.refs = React.createRef();
-        this.state = {message:'', getData: '', loading: true };
+        this.state = { message: '', getData: '', loading: true };
     }
-
-    // componentDidMount() {
-    //     this.getTestData();
-    //   }
 
     onCreateEmployee = () => {
         let PostApiData = {
@@ -21,25 +15,33 @@ class InputFormStock extends React.Component {
             Salary: this.refs.Salary.value
 
         };
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
 
-        fetch('https://localhost:44424/postapi', {
+        // var raw = JSON.stringify({
+        //     "Id": "2222",
+        //     "Name": "aaabbbccc",
+        //     "Location": "Locateeee",
+        //     "Salary": "10000"
+        // });
+        var requestOptions = {
             method: 'POST',
-            headers: { 'Content-type': 'application/json' },
-            body: PostApiData
-        }).then(r => r.json()).then(res => {
-            if (res) {
-                this.setState({ message: 'Success ////'+res.toString()});
-            }else{
-                this.setState({message:'Fail ////'});
-            }
-        });
+            headers: myHeaders,
+            body: JSON.stringify(PostApiData),
+            redirect: 'follow'
+        };
+
+        fetch("https://localhost:44424/postapi/", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
     }
 
     async getTestData() {
         const response = await fetch('postapi');
         console.log("response: " + response);
-        this.setState({ getData: 'Test getdata result: '+ response.message });
-      }
+        this.setState({ getData: 'Test getdata result: ' + response.message });
+    }
 
     render() {
         return (
